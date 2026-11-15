@@ -55,7 +55,7 @@ export class AIService {
     if (ai) {
       try {
         const response = await ai.models.generateContent({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-3.8-flash',
           contents: `You are an elite certified financial planner. Analyze this user's finances and return ONLY a valid JSON object matching this TypeScript interface:
 {
   "summary": "Short 2-3 sentence overview",
