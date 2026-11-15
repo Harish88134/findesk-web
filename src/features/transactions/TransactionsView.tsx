@@ -65,8 +65,37 @@ export const TransactionsView: React.FC = () => {
     loadTransactions();
   }, [type, search, sortBy, sortOrder, page]);
 
-  const handleExportCsv = () => {
-    window.location.href = '/api/transactions/export/csv';
+  const [isExporting, setIsExporting] = useState(false);
+
+  const handleExportCsv = async () => {
+    setIsExporting(true);
+    try {
+      const token = localStorage.getItem('access_token');
+      const response = await fetch('/api/transactions/export/csv', {
+        method: 'GET',
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Export failed with status ${response.status}`);
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `transactions_export_${new Date().toISOString().split('T')[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err: any) {
+      alert('Error exporting CSV: ' + (err.message || 'Export failed'));
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   const handleImportCsv = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -122,9 +151,11 @@ export const TransactionsView: React.FC = () => {
           </label>
           <button
             onClick={handleExportCsv}
-            className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-xs transition-colors shrink-0"
+            disabled={isExporting}
+            className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-xs transition-colors shrink-0 disabled:opacity-50"
           >
-            <Download className="w-4 h-4 text-slate-500" /> Export CSV Report
+            <Download className="w-4 h-4 text-slate-500" />
+            <span>{isExporting ? 'Exporting...' : 'Export CSV Report'}</span>
           </button>
         </div>
       </div>
