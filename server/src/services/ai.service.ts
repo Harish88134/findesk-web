@@ -12,6 +12,16 @@ export interface AIInsightResponse {
   generatedBy: 'gemini-ai' | 'intelligent-engine';
 }
 
+const currencySymbols: Record<string, string> = {
+  USD: '$',
+  EUR: '€',
+  GBP: '£',
+  JPY: '¥',
+  CAD: 'CA$',
+  AUD: 'A$',
+  INR: '₹',
+};
+
 export class AIService {
   private getClient(): GoogleGenAI | null {
     const apiKey = process.env.GEMINI_API_KEY;
@@ -22,6 +32,10 @@ export class AIService {
   }
 
   async generateFinancialInsights(userId: string): Promise<AIInsightResponse> {
+    const user = await dbStore.findUserById(userId);
+    const userCurrency = user?.currency || 'USD';
+    const sym = currencySymbols[userCurrency] || '$';
+
     const incomes = await dbStore.getIncomes(userId);
     const expenses = await dbStore.getExpenses(userId);
     const budgets = await dbStore.getBudgets(userId);
@@ -41,29 +55,32 @@ export class AIService {
     const topCategory = Object.entries(categoryTotals).sort((a, b) => b[1] - a[1])[0] || ['None', 0];
 
     const promptData = {
-      totalIncome,
-      totalExpense,
-      netSavings,
+      currency: userCurrency,
+      currencySymbol: sym,
+      totalIncome: `${sym}${totalIncome}`,
+      totalExpense: `${sym}${totalExpense}`,
+      netSavings: `${sym}${netSavings}`,
       savingsRate: `${savingsRate}%`,
-      topExpenseCategory: `${topCategory[0]} ($${topCategory[1]})`,
-      budgetLimits: budgets.map((b) => ({ category: b.category, limit: b.monthlyLimit })),
+      topExpenseCategory: `${topCategory[0]} (${sym}${topCategory[1]})`,
+      budgetLimits: budgets.map((b) => ({ category: b.category, limit: `${sym}${b.monthlyLimit}` })),
       savingsGoalsCount: goals.length,
-      recentExpenses: expenses.slice(0, 5).map((e) => ({ title: e.title, amount: e.amount, category: e.category })),
+      recentExpenses: expenses.slice(0, 5).map((e) => ({ title: e.title, amount: `${sym}${e.amount}`, category: e.category })),
     };
 
     const ai = this.getClient();
     if (ai) {
       try {
-        // Enforce a strict 4-second timeout on Gemini calls so the UI never hangs in loading state
         const aiPromise = ai.models.generateContent({
           model: 'gemini-2.5-flash',
-          contents: `You are an elite certified financial planner. Analyze this user's finances and return ONLY a valid JSON object matching this TypeScript interface:
+          contents: `You are an elite certified financial planner. The user's active currency is ${userCurrency} (symbol: ${sym}).
+Always use the user's currency symbol ${sym} for all monetary amounts in your observations, recommendations, and projected savings.
+Analyze this user's finances and return ONLY a valid JSON object matching this TypeScript interface:
 {
-  "summary": "Short 2-3 sentence overview",
+  "summary": "Short 2-3 sentence overview using ${sym}",
   "healthScore": 82,
-  "keyObservations": ["bullet 1", "bullet 2", "bullet 3"],
+  "keyObservations": ["bullet 1 using ${sym}", "bullet 2", "bullet 3"],
   "actionableRecommendations": ["tip 1", "tip 2", "tip 3"],
-  "projectedSavings": "Estimated projection text"
+  "projectedSavings": "Estimated projection text using ${sym}"
 }
 
 Financial Snapshot:
@@ -85,7 +102,7 @@ Output strictly raw JSON without markdown code fences.`,
           healthScore: Math.min(100, Math.max(0, Number(parsed.healthScore) || 75)),
           keyObservations: Array.isArray(parsed.keyObservations) ? parsed.keyObservations : [],
           actionableRecommendations: Array.isArray(parsed.actionableRecommendations) ? parsed.actionableRecommendations : [],
-          projectedSavings: parsed.projectedSavings || `Projected monthly surplus: $${Math.max(0, netSavings)}`,
+          projectedSavings: parsed.projectedSavings || `Projected monthly surplus: ${sym}${Math.max(0, netSavings).toLocaleString()}`,
           generatedBy: 'gemini-ai',
         };
       } catch (err: any) {
@@ -104,8 +121,8 @@ Output strictly raw JSON without markdown code fences.`,
     score = Math.min(98, Math.max(20, score));
 
     const observations: string[] = [
-      `Your current savings rate is ${savingsRate}%, with a net cash balance of $${netSavings.toLocaleString()}.`,
-      `Your largest expense sector is ${topCategory[0]} taking $${topCategory[1].toLocaleString()} (${totalExpense > 0 ? Math.round((topCategory[1] / totalExpense) * 100) : 0}% of all outflows).`,
+      `Your current savings rate is ${savingsRate}%, with a net cash balance of ${netSavings < 0 ? '-' : ''}${sym}${Math.abs(netSavings).toLocaleString()}.`,
+      `Your largest expense sector is ${topCategory[0]} taking ${sym}${topCategory[1].toLocaleString()} (${totalExpense > 0 ? Math.round((topCategory[1] / totalExpense) * 100) : 0}% of all outflows).`,
     ];
 
     if (savingsRate < 20) {
@@ -129,11 +146,11 @@ Output strictly raw JSON without markdown code fences.`,
     recommendations.push('Export transaction records periodically to monitor seasonal spending variances.');
 
     return {
-      summary: `Your financial profile indicates a ${savingsRate >= 20 ? 'healthy' : savingsRate >= 0 ? 'stable' : 'strained'} trajectory with $${totalIncome.toLocaleString()} income against $${totalExpense.toLocaleString()} in expenditures.`,
+      summary: `Your financial profile indicates a ${savingsRate >= 20 ? 'healthy' : savingsRate >= 0 ? 'stable' : 'strained'} trajectory with ${sym}${totalIncome.toLocaleString()} income against ${sym}${totalExpense.toLocaleString()} in expenditures.`,
       healthScore: score,
       keyObservations: observations,
       actionableRecommendations: recommendations,
-      projectedSavings: `Estimated annual net retention: $${(Math.max(0, netSavings) * 12).toLocaleString()}`,
+      projectedSavings: `Estimated annual net retention: ${sym}${(Math.max(0, netSavings) * 12).toLocaleString()}`,
       generatedBy: 'intelligent-engine',
     };
   }
