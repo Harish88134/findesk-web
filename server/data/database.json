@@ -1,0 +1,559 @@
+{
+  "users": [
+    {
+      "_id": "usr_admin_001",
+      "name": "System Admin",
+      "email": "admin@finance.dev",
+      "password": "$2b$10$A1UVLD3IwOYt82iRuiiwD.cVPfqju/6qh2yIlhAsCweUeLPIAEDge",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "createdAt": "2026-08-17T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "usr_demo_002",
+      "name": "test",
+      "email": "alex@finance.dev",
+      "password": "$2b$10$A1UVLD3IwOYt82iRuiiwD.cVPfqju/6qh2yIlhAsCweUeLPIAEDge",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150",
+      "currency": "INR",
+      "isEmailVerified": true,
+      "createdAt": "2026-09-16T04:54:37.254Z",
+      "updatedAt": "2026-11-15T05:00:57.114Z"
+    },
+    {
+      "_id": "usr_1794718477537_joik0",
+      "name": "Test Engineer",
+      "email": "tester_1794718477478@finance.dev",
+      "password": "$2b$10$NdIsSrarjpCCLNu55vMGNOh.dcXS0VcHye.Bmf3ZQr68PIeU/VOxu",
+      "role": "user",
+      "avatar": "",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "emailVerificationToken": "41baaa5c70a23b438845ad937944f005b33a2fbfc997650fd0cdb41452239821",
+      "createdAt": "2026-11-15T04:54:37.537Z",
+      "updatedAt": "2026-11-15T04:54:37.537Z"
+    },
+    {
+      "_id": "usr_1794718742378_hasbo",
+      "name": "Hari",
+      "email": "buttiharish88@gmail.com",
+      "password": "$2b$10$pbziHdANd78oTBn/h0ctKee3HqXFkGV5aqXRL8BWrSk62X1bF/xCG",
+      "role": "user",
+      "avatar": "",
+      "currency": "INR",
+      "isEmailVerified": true,
+      "emailVerificationToken": "151a808541385900924f87e36dd4b73f5106a0b0e056b48e17512e69df06306d",
+      "createdAt": "2026-11-15T04:59:02.378Z",
+      "updatedAt": "2026-11-15T04:59:15.250Z"
+    },
+    {
+      "_id": "usr_1794719809744_3dyv8",
+      "name": "Test Engineer",
+      "email": "tester_1794719809679@finance.dev",
+      "password": "$2b$10$OpXOoQPO8U3YMgF.YtFLvusgVIuTig.LHoAcXQURlKSvXMIYBuGUq",
+      "role": "user",
+      "avatar": "",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "emailVerificationToken": "113d1ec4e75b558590aa05c074992d103a947c25ae7dab017c7f54609dd76223",
+      "createdAt": "2026-11-15T05:16:49.744Z",
+      "updatedAt": "2026-11-15T05:16:49.744Z"
+    }
+  ],
+  "incomes": [
+    {
+      "_id": "inc_1794718677391_d2qer",
+      "userId": "usr_demo_002",
+      "title": "kuut",
+      "amount": 65434,
+      "source": "Salary",
+      "date": "2026-11-15T00:00:00.000Z",
+      "notes": "",
+      "createdAt": "2026-11-15T04:57:57.391Z",
+      "updatedAt": "2026-11-15T04:57:57.391Z"
+    },
+    {
+      "_id": "inc_001",
+      "userId": "usr_demo_002",
+      "title": "Principal Software Engineer Salary",
+      "amount": 7500,
+      "source": "Salary",
+      "date": "2026-10-31T18:30:00.000Z",
+      "notes": "Monthly direct deposit from Acme Corp",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "inc_002",
+      "userId": "usr_demo_002",
+      "title": "Technical Consulting & Code Audit",
+      "amount": 1850,
+      "source": "Freelance",
+      "date": "2026-11-07T18:30:00.000Z",
+      "notes": "Fintech audit milestone delivery",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "inc_003",
+      "userId": "usr_demo_002",
+      "title": "S&P 500 Dividend Payout",
+      "amount": 420,
+      "source": "Dividends",
+      "date": "2026-11-14T18:30:00.000Z",
+      "notes": "Quarterly index fund distribution",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "inc_004",
+      "userId": "usr_demo_002",
+      "title": "Previous Month Salary",
+      "amount": 7500,
+      "source": "Salary",
+      "date": "2026-09-30T18:30:00.000Z",
+      "notes": "Monthly salary",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "inc_005",
+      "userId": "usr_demo_002",
+      "title": "UI Design System Advisory",
+      "amount": 1200,
+      "source": "Freelance",
+      "date": "2026-10-13T18:30:00.000Z",
+      "notes": "Contract payout",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "inc_006",
+      "userId": "usr_demo_002",
+      "title": "Quarterly Performance Bonus",
+      "amount": 2500,
+      "source": "Bonus",
+      "date": "2026-09-27T18:30:00.000Z",
+      "notes": "Engineering team spot award",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    }
+  ],
+  "expenses": [
+    {
+      "_id": "exp_001",
+      "userId": "usr_demo_002",
+      "title": "Apartment Lease & Building Service",
+      "amount": 2100,
+      "category": "Rent",
+      "date": "2026-11-01T18:30:00.000Z",
+      "notes": "Monthly residential lease",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_002",
+      "userId": "usr_demo_002",
+      "title": "Whole Foods Market & Organic Groceries",
+      "amount": 420,
+      "category": "Food",
+      "date": "2026-11-04T18:30:00.000Z",
+      "notes": "Weekly household restocking",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_003",
+      "userId": "usr_demo_002",
+      "title": "Electric & High-Speed Fiber Internet",
+      "amount": 195,
+      "category": "Utilities",
+      "date": "2026-11-06T18:30:00.000Z",
+      "notes": "ConEd & Gigabit Fiber",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_004",
+      "userId": "usr_demo_002",
+      "title": "Commuter Rail & Metro Card",
+      "amount": 130,
+      "category": "Travel",
+      "date": "2026-11-09T18:30:00.000Z",
+      "notes": "Monthly transit pass",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_005",
+      "userId": "usr_demo_002",
+      "title": "Ergonomic Office Chair & Mechanical Keycaps",
+      "amount": 380,
+      "category": "Shopping",
+      "date": "2026-11-11T18:30:00.000Z",
+      "notes": "Home workspace upgrade",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_006",
+      "userId": "usr_demo_002",
+      "title": "Health & Dental Premium",
+      "amount": 240,
+      "category": "Medical",
+      "date": "2026-11-13T18:30:00.000Z",
+      "notes": "Monthly supplementary insurance",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_007",
+      "userId": "usr_demo_002",
+      "title": "System Architecture & Cloud Certification",
+      "amount": 299,
+      "category": "Education",
+      "date": "2026-11-15T18:30:00.000Z",
+      "notes": "Kubernetes and Cloud Architect exam vouchers",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_008",
+      "userId": "usr_demo_002",
+      "title": "Symphony Hall Tickets & Dinner",
+      "amount": 165,
+      "category": "Entertainment",
+      "date": "2026-11-17T18:30:00.000Z",
+      "notes": "Weekend evening cultural event",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_009",
+      "userId": "usr_demo_002",
+      "title": "Mobile Phone Plan & Cloud Backup",
+      "amount": 85,
+      "category": "Bills",
+      "date": "2026-11-19T18:30:00.000Z",
+      "notes": "Unlimited cellular & encrypted storage",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "exp_010",
+      "userId": "usr_demo_002",
+      "title": "Local Farm Fresh Dining",
+      "amount": 145,
+      "category": "Food",
+      "date": "2026-11-20T18:30:00.000Z",
+      "notes": "Dinner with colleagues",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    }
+  ],
+  "budgets": [
+    {
+      "_id": "bud_001",
+      "userId": "usr_demo_002",
+      "category": "Rent",
+      "monthlyLimit": 2200,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "bud_002",
+      "userId": "usr_demo_002",
+      "category": "Food",
+      "monthlyLimit": 750,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "bud_003",
+      "userId": "usr_demo_002",
+      "category": "Utilities",
+      "monthlyLimit": 250,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "bud_004",
+      "userId": "usr_demo_002",
+      "category": "Travel",
+      "monthlyLimit": 300,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "bud_005",
+      "userId": "usr_demo_002",
+      "category": "Shopping",
+      "monthlyLimit": 500,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "bud_006",
+      "userId": "usr_demo_002",
+      "category": "Entertainment",
+      "monthlyLimit": 350,
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    }
+  ],
+  "savingsGoals": [
+    {
+      "_id": "goal_001",
+      "userId": "usr_demo_002",
+      "name": "Emergency Reserve Fund (6 Months)",
+      "targetAmount": 25000,
+      "currentAmount": 18500,
+      "targetDate": "2027-06-29T18:30:00.000Z",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "goal_002",
+      "userId": "usr_demo_002",
+      "name": "New Electric Vehicle Downpayment",
+      "targetAmount": 12000,
+      "currentAmount": 7800,
+      "targetDate": "2027-11-14T18:30:00.000Z",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "goal_003",
+      "userId": "usr_demo_002",
+      "name": "Japan Autumn Expedition",
+      "targetAmount": 5000,
+      "currentAmount": 4200,
+      "targetDate": "2026-10-19T18:30:00.000Z",
+      "createdAt": "2026-11-15T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "notif_1794719809745_a1eix",
+      "userId": "usr_1794719809744_3dyv8",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T05:16:49.745Z",
+      "updatedAt": "2026-11-15T05:16:49.745Z"
+    },
+    {
+      "_id": "notif_1794718742379_qec29",
+      "userId": "usr_1794718742378_hasbo",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T04:59:02.379Z",
+      "updatedAt": "2026-11-15T04:59:02.379Z"
+    },
+    {
+      "_id": "notif_1794718477538_775el",
+      "userId": "usr_1794718477537_joik0",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T04:54:37.538Z",
+      "updatedAt": "2026-11-15T04:54:37.538Z"
+    },
+    {
+      "_id": "notif_001",
+      "userId": "usr_demo_002",
+      "title": "Budget Alert: Food & Dining",
+      "message": "You have consumed 75% of your $750 Food budget for this month.",
+      "type": "budget_alert",
+      "isRead": false,
+      "createdAt": "2026-11-15T02:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "notif_002",
+      "userId": "usr_demo_002",
+      "title": "Savings Milestone Approaching",
+      "message": "Your \"Japan Autumn Expedition\" goal is at 84% completion!",
+      "type": "goal_achieved",
+      "isRead": false,
+      "createdAt": "2026-11-14T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    },
+    {
+      "_id": "notif_003",
+      "userId": "usr_demo_002",
+      "title": "Monthly Financial Summary Ready",
+      "message": "Your net cash flow was positive by $4,120 across all accounts.",
+      "type": "monthly_summary",
+      "isRead": true,
+      "createdAt": "2026-11-13T04:54:37.254Z",
+      "updatedAt": "2026-11-15T04:54:37.254Z"
+    }
+  ],
+  "refreshTokens": [
+    {
+      "_id": "rt_1794718477418",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODQ3NywiZXhwIjoxNzk1MzIzMjc3fQ.WVW3M-eANCo1r3O3ASpEakkp-k3MMfcQkN5UeKlGpjY",
+      "expiresAt": "2026-11-22T04:54:37.418Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:54:37.418Z"
+    },
+    {
+      "_id": "rt_1794718477538",
+      "userId": "usr_1794718477537_joik0",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcxODQ3NzUzN19qb2lrMCIsImVtYWlsIjoidGVzdGVyXzE3OTQ3MTg0Nzc0NzhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODQ3NywiZXhwIjoxNzk1MzIzMjc3fQ.knztmU5na150l0JrL5I2uxtxF_Hnq2qu3oKWemjBEgA",
+      "expiresAt": "2026-11-22T04:54:37.538Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:54:37.538Z"
+    },
+    {
+      "_id": "rt_1794718634624",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODYzNCwiZXhwIjoxNzk1MzIzNDM0fQ.Y9jAghHftDHvXVeQKsD5qqUmjE4qD8I8kcGFAJHRyp4",
+      "expiresAt": "2026-11-22T04:57:14.624Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:57:14.624Z"
+    },
+    {
+      "_id": "rt_1794718694593",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODY5NCwiZXhwIjoxNzk1MzIzNDk0fQ.5twir9pkkSl8rAqDkPHHH8LPVyvwce5AnuhmVfROvUs",
+      "expiresAt": "2026-11-22T04:58:14.593Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:58:14.593Z"
+    },
+    {
+      "_id": "rt_1794718695625",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODY5NSwiZXhwIjoxNzk1MzIzNDk1fQ.UgrNOVnsHNl5sjumwOwtpzSiL_OH7TFHod3leGYUESk",
+      "expiresAt": "2026-11-22T04:58:15.625Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:58:15.625Z"
+    },
+    {
+      "_id": "rt_1794718696462",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODY5NiwiZXhwIjoxNzk1MzIzNDk2fQ.MgcFKgnw0NvmGmHdQOnfM4YmIGeHspO05I2vvm6Q4qg",
+      "expiresAt": "2026-11-22T04:58:16.462Z",
+      "revoked": true,
+      "createdAt": "2026-11-15T04:58:16.462Z"
+    },
+    {
+      "_id": "rt_1794718742379",
+      "userId": "usr_1794718742378_hasbo",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcxODc0MjM3OF9oYXNibyIsImVtYWlsIjoiYnV0dGloYXJpc2g4OEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODc0MiwiZXhwIjoxNzk1MzIzNTQyfQ.x18YTbeVtp89Q2c9LZKE0R6wxHbr4v6oXrf62RXCUVQ",
+      "expiresAt": "2026-11-22T04:59:02.379Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T04:59:02.379Z"
+    },
+    {
+      "_id": "rt_1794718806347",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgwNiwiZXhwIjoxNzk1MzIzNjA2fQ.4HyTH7NIlpHAp2OWIePFjki6ETL-WFyNyB2Kw1cdbVY",
+      "expiresAt": "2026-11-22T05:00:06.347Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:06.347Z"
+    },
+    {
+      "_id": "rt_1794718806996",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgwNiwiZXhwIjoxNzk1MzIzNjA2fQ.4HyTH7NIlpHAp2OWIePFjki6ETL-WFyNyB2Kw1cdbVY",
+      "expiresAt": "2026-11-22T05:00:06.996Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:06.996Z"
+    },
+    {
+      "_id": "rt_1794718808089",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgwOCwiZXhwIjoxNzk1MzIzNjA4fQ.mSaAJXGERHSmEP-rgf5D79mfvZ9aFI1B4x68ZWAQqG8",
+      "expiresAt": "2026-11-22T05:00:08.089Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:08.089Z"
+    },
+    {
+      "_id": "rt_1794718809246",
+      "userId": "usr_admin_001",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfYWRtaW5fMDAxIiwiZW1haWwiOiJhZG1pbkBmaW5hbmNlLmRldiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5NDcxODgwOSwiZXhwIjoxNzk1MzIzNjA5fQ.SS-wM5h1gqnYX5JJO5xpcMs8M3ABQjO7APkPK-ZLqpM",
+      "expiresAt": "2026-11-22T05:00:09.246Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:09.246Z"
+    },
+    {
+      "_id": "rt_1794718810631",
+      "userId": "usr_admin_001",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfYWRtaW5fMDAxIiwiZW1haWwiOiJhZG1pbkBmaW5hbmNlLmRldiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5NDcxODgxMCwiZXhwIjoxNzk1MzIzNjEwfQ.Nr9y_-ruJmQJiul5gxmsDnSjddkQcLSDI4tmEH3z2EU",
+      "expiresAt": "2026-11-22T05:00:10.631Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:10.631Z"
+    },
+    {
+      "_id": "rt_1794718811850",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgxMSwiZXhwIjoxNzk1MzIzNjExfQ.usoAe5SSZ_TYSOwp0vx9RnSZAcdf3CjvO5s32zJHP1c",
+      "expiresAt": "2026-11-22T05:00:11.850Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:11.850Z"
+    },
+    {
+      "_id": "rt_1794718812915",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgxMiwiZXhwIjoxNzk1MzIzNjEyfQ.fkeP9PzaZAUuBtLASJaD7UyA--0r44fQs9kufCNkdnE",
+      "expiresAt": "2026-11-22T05:00:12.915Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:12.915Z"
+    },
+    {
+      "_id": "rt_1794718814349",
+      "userId": "usr_admin_001",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfYWRtaW5fMDAxIiwiZW1haWwiOiJhZG1pbkBmaW5hbmNlLmRldiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5NDcxODgxNCwiZXhwIjoxNzk1MzIzNjE0fQ.RcrH0rcg8cHg-OKYspNjBDbIZbGd5PH3RMXZOyle0us",
+      "expiresAt": "2026-11-22T05:00:14.349Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:14.349Z"
+    },
+    {
+      "_id": "rt_1794718815148",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgxNSwiZXhwIjoxNzk1MzIzNjE1fQ.BLlRuRNwtkRtltDjf68J2tFJUiIB5aHkfT4r8aNpqPk",
+      "expiresAt": "2026-11-22T05:00:15.148Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:15.148Z"
+    },
+    {
+      "_id": "rt_1794718816450",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgxNiwiZXhwIjoxNzk1MzIzNjE2fQ.PpuCcsq8X-uRCJC0Zq5784xtGQPv3F1CtJBiEUciJOY",
+      "expiresAt": "2026-11-22T05:00:16.450Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:00:16.450Z"
+    },
+    {
+      "_id": "rt_1794719809610",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxOTgwOSwiZXhwIjoxNzk1MzI0NjA5fQ.h5V5qoru-HS2xo8RumF20fEwxKtnSLrOqs-L0AXdbVo",
+      "expiresAt": "2026-11-22T05:16:49.610Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:16:49.610Z"
+    },
+    {
+      "_id": "rt_1794719809745",
+      "userId": "usr_1794719809744_3dyv8",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcxOTgwOTc0NF8zZHl2OCIsImVtYWlsIjoidGVzdGVyXzE3OTQ3MTk4MDk2NzlAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxOTgwOSwiZXhwIjoxNzk1MzI0NjA5fQ.fQsGPsDFEkqh4ksBE5yZb7ITPKK2sxQpLmd8kynPzwM",
+      "expiresAt": "2026-11-22T05:16:49.745Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:16:49.745Z"
+    }
+  ]
+}

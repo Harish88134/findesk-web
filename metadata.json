@@ -1,0 +1,6 @@
+{
+  "name": "Personal Finance Management Dashboard",
+  "description": "Production-ready enterprise Personal Finance Management Dashboard with income and expense tracking, budget limits, savings goals, interactive analytics, and multi-user authentication.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

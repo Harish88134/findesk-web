@@ -1,0 +1,94 @@
+// server/src/docs/api.json
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Personal Finance Management Dashboard API",
+    "version": "1.0.0",
+    "description": "Production-grade RESTful API for managing personal finances, tracking income and expenses, setting category budgets, tracking savings goals, and generating real-time analytics."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Local Development Server"
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register a new user account",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email", "password"],
+                "properties": {
+                  "name": { "type": "string", "example": "Alex Morgan" },
+                  "email": { "type": "string", "example": "alex@finance.dev" },
+                  "password": { "type": "string", "example": "Password123!" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "User created with JWT tokens" },
+          "400": { "description": "Validation error or existing email" }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Authenticate user credentials",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["email", "password"],
+                "properties": {
+                  "email": { "type": "string", "example": "alex@finance.dev" },
+                  "password": { "type": "string", "example": "Password123!" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Login successful with tokens and profile" },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/analytics/dashboard": {
+      "get": {
+        "summary": "Get high-level dashboard metrics, cash flow trends, and budget utilization",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Dashboard analytics object" }
+        }
+      }
+    },
+    "/income": {
+      "get": { "summary": "Get user income records", "security": [{ "bearerAuth": [] }] },
+      "post": { "summary": "Create new income entry", "security": [{ "bearerAuth": [] }] }
+    },
+    "/expenses": {
+      "get": { "summary": "Get user expenses with filters", "security": [{ "bearerAuth": [] }] },
+      "post": { "summary": "Create new expense entry", "security": [{ "bearerAuth": [] }] }
+    },
+    "/budgets": {
+      "get": { "summary": "Get category budgets with usage metrics", "security": [{ "bearerAuth": [] }] },
+      "post": { "summary": "Set category monthly budget limit", "security": [{ "bearerAuth": [] }] }
+    },
+    "/goals": {
+      "get": { "summary": "Get savings goals and progress", "security": [{ "bearerAuth": [] }] },
+      "post": { "summary": "Create new savings goal", "security": [{ "bearerAuth": [] }] }
+    },
+    "/transactions": {
+      "get": { "summary": "Get unified transaction history with pagination and search", "security": [{ "bearerAuth": [] }] }
+    }
+  }
+}
