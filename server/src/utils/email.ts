@@ -36,7 +36,7 @@ export const sendPasswordResetEmail = async (email: string, resetToken: string, 
   const html = `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
       <h2 style="color: #2563eb;">Password Reset Request</h2>
-      <p>You requested a password reset for your Personal Finance Management account.</p>
+      <p>You requested a password reset for your FinDesk Web account.</p>
       <p>Click the link below or copy it to your browser to set a new password:</p>
       <a href="${resetUrl}" style="display: inline-block; background-color: #2563eb; color: #fff; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px;">Reset Password</a>
       <p style="margin-top: 20px; font-size: 12px; color: #666;">This link will expire in 1 hour. If you did not request this, please ignore this email.</p>
@@ -44,7 +44,7 @@ export const sendPasswordResetEmail = async (email: string, resetToken: string, 
   `;
   return sendEmail({
     to: email,
-    subject: 'Password Reset - Personal Finance Management',
+    subject: 'Password Reset - FinDesk Web',
     html,
   });
 };
@@ -55,13 +55,13 @@ export const sendVerificationEmail = async (email: string, token: string, origin
   const html = `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
       <h2 style="color: #2563eb;">Verify Your Email</h2>
-      <p>Thank you for joining Personal Finance Management. Please confirm your email address by clicking the link below:</p>
+      <p>Thank you for joining FinDesk Web. Please confirm your email address by clicking the link below:</p>
       <a href="${verifyUrl}" style="display: inline-block; background-color: #2563eb; color: #fff; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px;">Verify Email</a>
     </div>
   `;
   return sendEmail({
     to: email,
-    subject: 'Verify your Email - Personal Finance Management',
+    subject: 'Verify your Email - FinDesk Web',
     html,
   });
 };

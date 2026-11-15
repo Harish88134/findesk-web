@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: personal-finance-hub
+    name: findesk-web
     env: node
     plan: free
     buildCommand: npm install && npm run build

@@ -1,6 +1,6 @@
-# Personal Finance Management Dashboard
+# FinDesk Web — Cloud Financial Intelligence & Wealth Management Portal
 
-A full-stack, enterprise-grade Personal Finance Management Dashboard designed for tracking income and expenses, setting category-based budget thresholds, reaching long-term savings goals, and monitoring real-time financial health via interactive visualizations.
+FinDesk Web is a full-stack, enterprise-grade cloud financial intelligence and wealth management web application. It features automated cash flow analytics, AI-powered financial advisory via Google Gemini, two-way CSV ledger import/export, category budget threshold monitoring, long-term savings goal tracking, and resilient dual-mode database persistence (MongoDB Atlas & local storage).
 
 ---
 

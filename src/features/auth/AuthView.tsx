@@ -85,8 +85,8 @@ export const AuthView: React.FC = () => {
           <div className="w-12 h-12 mx-auto rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center font-bold mb-3 shadow-sm">
             <Wallet className="w-6 h-6 text-slate-950" />
           </div>
-          <h2 className="text-xl font-bold tracking-tight">FinanceHub</h2>
-          <p className="text-xs text-slate-400 mt-1">Personal Finance & Wealth Management</p>
+          <h2 className="text-xl font-bold tracking-tight">FinDesk Web</h2>
+          <p className="text-xs text-slate-400 mt-1">Cloud Financial Intelligence & Wealth Management Portal</p>
         </div>
 
         {/* Form Body */}

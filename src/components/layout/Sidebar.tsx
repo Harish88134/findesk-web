@@ -75,9 +75,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
           <div>
             <h1 className="font-bold text-white text-base tracking-tight leading-tight">
-              FinanceHub
+              FinDesk Web
             </h1>
-            <p className="text-[11px] text-slate-400 font-medium">Personal Finance Manager</p>
+            <p className="text-[11px] text-slate-400 font-medium">Cloud Financial Workspace</p>
           </div>
         </div>
 

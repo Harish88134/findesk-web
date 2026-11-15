@@ -62,9 +62,33 @@
       "emailVerificationToken": "113d1ec4e75b558590aa05c074992d103a947c25ae7dab017c7f54609dd76223",
       "createdAt": "2026-11-15T05:16:49.744Z",
       "updatedAt": "2026-11-15T05:16:49.744Z"
+    },
+    {
+      "_id": "usr_1794722265057_czoa1",
+      "name": "Test Engineer",
+      "email": "tester_1794722264954@finance.dev",
+      "password": "$2b$10$TxKCjIWBMo9Ai7Z5a3wFCO40XoJQr8XL7fGXgD0KxxcWIGdHrDRIG",
+      "role": "user",
+      "avatar": "",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "emailVerificationToken": "77db42b3e9aef576cc415bcb3004b27c019dad526d559a39bbcff294e451a17f",
+      "createdAt": "2026-11-15T05:57:45.057Z",
+      "updatedAt": "2026-11-15T05:57:45.057Z"
     }
   ],
   "incomes": [
+    {
+      "_id": "inc_1794722264436_oaykn",
+      "userId": "usr_demo_002",
+      "title": "Dividend Credit",
+      "amount": 150,
+      "source": "Dividends",
+      "date": "2026-11-15T05:57:44.436Z",
+      "notes": "Quarterly reinvestment payout",
+      "createdAt": "2026-11-15T05:57:44.436Z",
+      "updatedAt": "2026-11-15T05:57:44.436Z"
+    },
     {
       "_id": "inc_1794718677391_d2qer",
       "userId": "usr_demo_002",
@@ -144,6 +168,17 @@
     }
   ],
   "expenses": [
+    {
+      "_id": "exp_1794722264435_au0zn",
+      "userId": "usr_demo_002",
+      "title": "Espresso & Bakery",
+      "amount": 15.5,
+      "category": "Food",
+      "date": "2026-11-15T05:57:44.434Z",
+      "notes": "Morning coffee meeting",
+      "createdAt": "2026-11-15T05:57:44.435Z",
+      "updatedAt": "2026-11-15T05:57:44.435Z"
+    },
     {
       "_id": "exp_001",
       "userId": "usr_demo_002",
@@ -338,6 +373,17 @@
     }
   ],
   "notifications": [
+    {
+      "_id": "notif_1794722265059_z9v84",
+      "userId": "usr_1794722265057_czoa1",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T05:57:45.059Z",
+      "updatedAt": "2026-11-15T05:57:45.059Z"
+    },
     {
       "_id": "notif_1794719809745_a1eix",
       "userId": "usr_1794719809744_3dyv8",
@@ -554,6 +600,22 @@
       "expiresAt": "2026-11-22T05:16:49.745Z",
       "revoked": false,
       "createdAt": "2026-11-15T05:16:49.745Z"
+    },
+    {
+      "_id": "rt_1794722264853",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyMjI2NCwiZXhwIjoxNzk1MzI3MDY0fQ.Ih4Wk_tXPFfdTt_a7kVfnQHKo_etR3gMRF25PfIro9M",
+      "expiresAt": "2026-11-22T05:57:44.853Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:57:44.853Z"
+    },
+    {
+      "_id": "rt_1794722265058",
+      "userId": "usr_1794722265057_czoa1",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcyMjI2NTA1N19jem9hMSIsImVtYWlsIjoidGVzdGVyXzE3OTQ3MjIyNjQ5NTRAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyMjI2NSwiZXhwIjoxNzk1MzI3MDY1fQ.5qC-uBAj3-qHBriM_A80m_IY5kyKaQBFGvjcNc0b0_E",
+      "expiresAt": "2026-11-22T05:57:45.058Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T05:57:45.058Z"
     }
   ]
 }
