@@ -75,6 +75,32 @@
       "emailVerificationToken": "77db42b3e9aef576cc415bcb3004b27c019dad526d559a39bbcff294e451a17f",
       "createdAt": "2026-11-15T05:57:45.057Z",
       "updatedAt": "2026-11-15T05:57:45.057Z"
+    },
+    {
+      "_id": "usr_1794723551658_h16za",
+      "name": "Test Engineer",
+      "email": "tester_1794723551552@finance.dev",
+      "password": "$2b$10$ZMGsJ0ba9Bxm2kOgkQboa.2QXQ5z8hAJUFeODqJgBuPNYEJR6RHK2",
+      "role": "user",
+      "avatar": "",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "emailVerificationToken": "0a6de7ecb7f75a27451e706e61f7db0ee1d2a7c5c58d1bc740a867107395b501",
+      "createdAt": "2026-11-15T06:19:11.658Z",
+      "updatedAt": "2026-11-15T06:19:11.658Z"
+    },
+    {
+      "_id": "usr_1794724418332_qwhtg",
+      "name": "Test Engineer",
+      "email": "tester_1794724418232@finance.dev",
+      "password": "$2b$10$IhYmp2kg4FLCHHNICPR6iusO9R8/pBEarXSuot1YL24NnS/BNBmD6",
+      "role": "user",
+      "avatar": "",
+      "currency": "USD",
+      "isEmailVerified": true,
+      "emailVerificationToken": "435f41ea0293b3759e0c69083850aee27816b25769f729fcdceb464fa35e0560",
+      "createdAt": "2026-11-15T06:33:38.332Z",
+      "updatedAt": "2026-11-15T06:33:38.332Z"
     }
   ],
   "incomes": [
@@ -374,6 +400,28 @@
   ],
   "notifications": [
     {
+      "_id": "notif_1794724418334_qeqaa",
+      "userId": "usr_1794724418332_qwhtg",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T06:33:38.334Z",
+      "updatedAt": "2026-11-15T06:33:38.334Z"
+    },
+    {
+      "_id": "notif_1794723551659_hoc5j",
+      "userId": "usr_1794723551658_h16za",
+      "title": "Welcome to Personal Finance Hub",
+      "message": "Your account is ready. Begin by setting up your monthly budget and logging income or expenses.",
+      "type": "system",
+      "isRead": false,
+      "metadata": {},
+      "createdAt": "2026-11-15T06:19:11.659Z",
+      "updatedAt": "2026-11-15T06:19:11.659Z"
+    },
+    {
       "_id": "notif_1794722265059_z9v84",
       "userId": "usr_1794722265057_czoa1",
       "title": "Welcome to Personal Finance Hub",
@@ -582,7 +630,7 @@
       "userId": "usr_demo_002",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcxODgxNiwiZXhwIjoxNzk1MzIzNjE2fQ.PpuCcsq8X-uRCJC0Zq5784xtGQPv3F1CtJBiEUciJOY",
       "expiresAt": "2026-11-22T05:00:16.450Z",
-      "revoked": false,
+      "revoked": true,
       "createdAt": "2026-11-15T05:00:16.450Z"
     },
     {
@@ -616,6 +664,62 @@
       "expiresAt": "2026-11-22T05:57:45.058Z",
       "revoked": false,
       "createdAt": "2026-11-15T05:57:45.058Z"
+    },
+    {
+      "_id": "rt_1794723551447",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyMzU1MSwiZXhwIjoxNzk1MzI4MzUxfQ.JtwtnqepiotqIyNLfXUKaqpqcMTnI-IMRWXkuL7BPUQ",
+      "expiresAt": "2026-11-22T06:19:11.447Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:19:11.447Z"
+    },
+    {
+      "_id": "rt_1794723551659",
+      "userId": "usr_1794723551658_h16za",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcyMzU1MTY1OF9oMTZ6YSIsImVtYWlsIjoidGVzdGVyXzE3OTQ3MjM1NTE1NTJAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyMzU1MSwiZXhwIjoxNzk1MzI4MzUxfQ.tu5laaUwRiIAZbtNyh_fUCYXSDTLpi-kDsuWu5JN1dI",
+      "expiresAt": "2026-11-22T06:19:11.659Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:19:11.659Z"
+    },
+    {
+      "_id": "rt_1794724082596",
+      "userId": "usr_1794718742378_hasbo",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcxODc0MjM3OF9oYXNibyIsImVtYWlsIjoiYnV0dGloYXJpc2g4OEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyNDA4MiwiZXhwIjoxNzk1MzI4ODgyfQ.Zu_yKNEKPKIJQzfZXN4SVRRP_fX5MPiEnmcQTs1VAt0",
+      "expiresAt": "2026-11-22T06:28:02.596Z",
+      "revoked": true,
+      "createdAt": "2026-11-15T06:28:02.596Z"
+    },
+    {
+      "_id": "rt_1794724122770",
+      "userId": "usr_1794718742378_hasbo",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcxODc0MjM3OF9oYXNibyIsImVtYWlsIjoiYnV0dGloYXJpc2g4OEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyNDEyMiwiZXhwIjoxNzk1MzI4OTIyfQ.R3vWuFMixDUe0dOmPPXkUnB2NlIk5yJWZCpQAAR86u0",
+      "expiresAt": "2026-11-22T06:28:42.770Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:28:42.770Z"
+    },
+    {
+      "_id": "rt_1794724281584",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyNDI4MSwiZXhwIjoxNzk1MzI5MDgxfQ.pccK8XHQ5hmDkXllMCflSs6a1x6qpVvEPR6EgqX1Av0",
+      "expiresAt": "2026-11-22T06:31:21.584Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:31:21.584Z"
+    },
+    {
+      "_id": "rt_1794724418131",
+      "userId": "usr_demo_002",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfZGVtb18wMDIiLCJlbWFpbCI6ImFsZXhAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyNDQxOCwiZXhwIjoxNzk1MzI5MjE4fQ.QrqzTnJgCLy4Rxx0371YbULS2sl8j4qxOOYaKy4C9n0",
+      "expiresAt": "2026-11-22T06:33:38.131Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:33:38.131Z"
+    },
+    {
+      "_id": "rt_1794724418334",
+      "userId": "usr_1794724418332_qwhtg",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfMTc5NDcyNDQxODMzMl9xd2h0ZyIsImVtYWlsIjoidGVzdGVyXzE3OTQ3MjQ0MTgyMzJAZmluYW5jZS5kZXYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDcyNDQxOCwiZXhwIjoxNzk1MzI5MjE4fQ.XdtoDHcisZgczsvcwHU4Y_2sHvhMjwR2P54aY5T5V8o",
+      "expiresAt": "2026-11-22T06:33:38.334Z",
+      "revoked": false,
+      "createdAt": "2026-11-15T06:33:38.334Z"
     }
   ]
 }

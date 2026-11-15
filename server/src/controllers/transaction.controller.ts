@@ -197,7 +197,7 @@ export class TransactionController {
             userId,
             title,
             amount,
-            source: categoryOrSource,
+            source: categoryOrSource as any,
             date: new Date(dateStr),
             notes,
           });
@@ -207,7 +207,7 @@ export class TransactionController {
             userId,
             title,
             amount,
-            category: categoryOrSource,
+            category: categoryOrSource as any,
             date: new Date(dateStr),
             notes,
           });

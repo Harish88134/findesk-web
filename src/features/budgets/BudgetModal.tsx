@@ -44,7 +44,7 @@ export const BudgetModal: React.FC<Props> = ({ isOpen, onClose, onSuccess, editI
         const res = await financeApi.updateBudget(editItem._id, { monthlyLimit: limit });
         if (!res.success) throw new Error(res.message);
       } else {
-        const res = await financeApi.createBudget({ category, monthlyLimit: limit });
+        const res = await financeApi.createBudget({ category: category as any, monthlyLimit: limit });
         if (!res.success) throw new Error(res.message);
       }
       onSuccess();
