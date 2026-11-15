@@ -54,12 +54,13 @@ export class AIService {
     const ai = this.getClient();
     if (ai) {
       try {
-        const response = await ai.models.generateContent({
-          model: 'gemini-3.8-flash',
+        // Enforce a strict 4-second timeout on Gemini calls so the UI never hangs in loading state
+        const aiPromise = ai.models.generateContent({
+          model: 'gemini-2.5-flash',
           contents: `You are an elite certified financial planner. Analyze this user's finances and return ONLY a valid JSON object matching this TypeScript interface:
 {
   "summary": "Short 2-3 sentence overview",
-  "healthScore": 82, // integer between 0 and 100
+  "healthScore": 82,
   "keyObservations": ["bullet 1", "bullet 2", "bullet 3"],
   "actionableRecommendations": ["tip 1", "tip 2", "tip 3"],
   "projectedSavings": "Estimated projection text"
@@ -70,6 +71,11 @@ ${JSON.stringify(promptData, null, 2)}
 Output strictly raw JSON without markdown code fences.`,
         });
 
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('AI request timed out')), 4000)
+        );
+
+        const response: any = await Promise.race([aiPromise, timeoutPromise]);
         const text = response.text?.trim() || '';
         const cleaned = text.replace(/^```json\s*/, '').replace(/\s*```$/, '');
         const parsed = JSON.parse(cleaned);
@@ -82,8 +88,8 @@ Output strictly raw JSON without markdown code fences.`,
           projectedSavings: parsed.projectedSavings || `Projected monthly surplus: $${Math.max(0, netSavings)}`,
           generatedBy: 'gemini-ai',
         };
-      } catch (err) {
-        logger.warn('Gemini API call failed or rate-limited. Falling back to intelligent heuristic engine.', err);
+      } catch (err: any) {
+        logger.warn('Gemini AI unavailable or timed out; generating instant intelligent analysis.', err?.message || err);
       }
     }
 

@@ -97,9 +97,9 @@ export const DashboardView: React.FC<Props> = ({ onNavigateTab, onOpenQuickModal
         <MetricCard
           title="Current Balance"
           value={formatCurrency(data.currentBalance, currency)}
-          subtitle="Net available capital"
+          subtitle={data.currentBalance < 0 ? 'Deficit (Expenses exceed income)' : 'Net available capital'}
           icon={Wallet}
-          accentColor="blue"
+          accentColor={data.currentBalance < 0 ? 'rose' : 'blue'}
         />
         <MetricCard
           title="Total Income"

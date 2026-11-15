@@ -11,7 +11,8 @@ export const formatCurrency = (amount: number, currency = 'USD'): string => {
   };
 
   const symbol = symbolMap[currency] || '$';
-  return `${symbol}${Math.abs(amount).toLocaleString('en-US', {
+  const prefix = amount < 0 ? '-' : '';
+  return `${prefix}${symbol}${Math.abs(amount).toLocaleString('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}`;
