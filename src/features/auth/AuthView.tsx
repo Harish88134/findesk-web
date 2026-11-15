@@ -5,7 +5,7 @@ import { authApi } from '../../api/auth.api';
 import { useAuth } from '../../store/authStore';
 
 export const AuthView: React.FC = () => {
-  const { setUser, loginDemoUser, loginDemoAdmin } = useAuth();
+  const { setUser } = useAuth();
   const [tab, setTab] = useState<'login' | 'register' | 'forgot'>('login');
 
   // Form states
@@ -87,29 +87,6 @@ export const AuthView: React.FC = () => {
           </div>
           <h2 className="text-xl font-bold tracking-tight">FinanceHub</h2>
           <p className="text-xs text-slate-400 mt-1">Personal Finance & Wealth Management</p>
-        </div>
-
-        {/* 1-Click Demo Login Bar */}
-        <div className="p-4 bg-slate-50 border-b border-slate-200/80">
-          <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center">
-            Instant Prototyping Demo Access
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              onClick={() => loginDemoUser()}
-              className="py-2 px-3 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-1.5 transition-colors shadow-xs"
-            >
-              <UserCheck className="w-3.5 h-3.5" />
-              <span>Demo User</span>
-            </button>
-            <button
-              onClick={() => loginDemoAdmin()}
-              className="py-2 px-3 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center gap-1.5 transition-colors shadow-xs"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Demo Admin</span>
-            </button>
-          </div>
         </div>
 
         {/* Form Body */}

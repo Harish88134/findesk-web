@@ -5,7 +5,7 @@ import { useAuth } from '../../store/authStore';
 import { authApi } from '../../api/auth.api';
 
 export const SettingsView: React.FC = () => {
-  const { user, currency, setCurrency, setUser, loginDemoUser, loginDemoAdmin } = useAuth();
+  const { user, currency, setCurrency, setUser } = useAuth();
 
   // Profile Form state
   const [name, setName] = useState(user?.name || '');
@@ -92,28 +92,6 @@ export const SettingsView: React.FC = () => {
       <div>
         <h2 className="text-lg font-bold text-slate-900 tracking-tight">Account & System Preferences</h2>
         <p className="text-xs text-slate-500">Configure personal credentials, display parameters, and security credentials.</p>
-      </div>
-
-      {/* Switch Demo Roles Strip */}
-      <div className="bg-white border border-slate-200/80 rounded-xl p-4 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div>
-          <h4 className="text-xs font-bold text-slate-900">Developer Testing Sandbox Roles</h4>
-          <p className="text-[11px] text-slate-500">Instantly switch between Standard User and Admin account sessions.</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => loginDemoUser()}
-            className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
-            Switch to Standard User
-          </button>
-          <button
-            onClick={() => loginDemoAdmin()}
-            className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors"
-          >
-            Switch to Administrator
-          </button>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
